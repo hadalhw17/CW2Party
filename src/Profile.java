@@ -16,7 +16,7 @@ public class Profile {
 
     public ArrayList<Profile> friends = new ArrayList<Profile>();
 
-    public Profile(String name, int day, int month, int year, String town, String country, String nationality, String[] interests){
+    public Profile(String name, int day, int month, int year, String town, String country, String nationality, String[] interests) {
         this.name = name;
         this.day = day;
         this.month = month;
@@ -40,7 +40,9 @@ public class Profile {
         return country;
     }
 
-    public void setCountry(String country) {this.country = country;}
+    public void setCountry(String country) {
+        this.country = country;
+    }
 
     public String getNationality() {
         return nationality;
@@ -62,28 +64,30 @@ public class Profile {
         return name;
     }
 
-    public String getDateOfBirth(){
-        return day+"/"+month+"/"+year;
+    public String getDateOfBirth() {
+        return day + "/" + month + "/" + year;
     }
 
-    public void addFriend(Profile p){
+    public void addFriend(Profile p) {
         friends.add(p);
     }
 
-    public Profile getFriend(int i){
+    public Profile getFriend(int i) {
         return friends.get(i);
     }
 
-    public int getNumOfFriends(){ return friends.size();}
+    public int getNumOfFriends() {
+        return friends.size();
+    }
 
-    public String toString(){
+    public String toString() {
         String msg;
         msg = "Name: " + name;
-        msg+= "\nAge" +getDateOfBirth();
-        msg+="\nFrom: "+ town+","+country;
-        msg+="\nLikes: ";
-        for(String interest:interests){
-            msg+=interest+"\n";
+        msg += "\nAge" + getDateOfBirth();
+        msg += "\nFrom: " + town + "," + country;
+        msg += "\nLikes: ";
+        for (String interest : interests) {
+            msg += interest + "\n";
         }
         return msg;
     }

@@ -3,7 +3,7 @@
  */
 public class GraphMain {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         BST bt = FileReader.readProfiles("test.txt");
         Graph g = FileReader.readFriends("test_graph.txt", bt);

@@ -1,0 +1,5 @@
+name pame
+zame name
+zame pame
+name kris
+zame kris

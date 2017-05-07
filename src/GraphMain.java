@@ -11,9 +11,9 @@ public class GraphMain {
         //g.toString();
 
         //if(bt.find("name"))
-        g.commonFriends(bt.find("Jane Doe").getProfile(),
-                bt.find("Archibald Smith").getProfile()).printAlphabetical(
-                        g.commonFriends(bt.find("Jane Doe").getProfile(),
-                        bt.find("Archibald Smith").getProfile()).getRoot());
+        g.commonFriends(bt.find("Jeff Hanneman").getProfile(),
+                bt.find("Dimebag Darell").getProfile()).printAlphabetical(
+                        g.commonFriends(bt.find("Jeff Hanneman").getProfile(),
+                        bt.find("Dimebag Darell").getProfile()).getRoot());
     }
 }

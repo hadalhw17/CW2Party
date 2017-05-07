@@ -189,10 +189,11 @@ public class Profile {
         msg = "Name: " + name;
         msg += "\nAge" + getDateOfBirth();
         msg += "\nFrom: " + town + "," + country;
-        msg += "\nLikes: ";
+        msg += "\nLikes: \n";
         for (String interest : interests) {
             msg += interest + "\n";
         }
+        msg += "Has " + getNumOfFriends() + " friends.";
         return msg;
     }
 }

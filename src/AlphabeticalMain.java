@@ -5,7 +5,7 @@ public class AlphabeticalMain {
 
     public static void main(String[] args){
 
-        BST bt = FileReader.readProfiles("test.txt");
+        BST bt = FileReader.readProfiles("profiles.txt");
         bt.printAlphabetical(bt.getRoot());
     }
 }

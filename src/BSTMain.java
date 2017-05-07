@@ -4,12 +4,16 @@
 public class BSTMain {
 
     public static void main(String[] args) {
-        String[] interests = {"wank", "jerk", "drink vodka"};
-        Profile bors = new Profile("Boris", 17, 6, 1997, "Novosibirsk", "Russia", "Russian", interests);
+        String[] interests = {"Sit", "Eat", "Sleep", "Play Games", "Have a cool life"};
+        Profile boris = new Profile("Boris", 17, 6, 1997, "Novosibirsk", "Russia", "Russian", interests);
         Profile vladimir = new Profile("Vladimir", 17, 6, 1997, "Novosibirsk", "Russia", "Russian", interests);
         Profile nikolai = new Profile("Nikolai", 17, 6, 1997, "Novosibirsk", "Russia", "Russian", interests);
-        BST bt = FileReader.readProfiles("profiles.txt");
+        BST newBt = new BST();
 
-        bt.printAlphabetical(bt.getRoot());
+        newBt.insertProfile(boris);
+        newBt.insertProfile(vladimir);
+        newBt.insertProfile(nikolai);
+
+        newBt.printAlphabetical(newBt.getRoot());
     }
 }

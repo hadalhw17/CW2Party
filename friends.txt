@@ -6,6 +6,8 @@ Friendly Ghost Casper,Bob Marley
 Peter the Great,Alexander Pushkin
 Freddie Mercury,Clifford Burton
 Clifford Burton,Dimebag Darell
+
+
 Dimebag Darell,Freddie Mercury
 Stephen King,Alexander Pushkin
 Stephen Hawking,Nikola Tesla
@@ -18,6 +20,7 @@ Freddie Mercury,Friendly Ghost Casper
 Alexander Pushkin,Friendly Ghost Casper
 Jeff Hanneman,Stephen King
 Stephen King,Pablo Picasso
+
 Pablo Picasso,Bill Gates
 Peter the Great,Georgy Zhukov
 Alan Cox,Bill Gates

@@ -9,6 +9,7 @@ Jeff Hanneman,31,1,1964,California,USA,American,Music;Spiders;Heiniken
 Stephen King,21,9,1947,Portland,USA,American,Writing;Reading;Acting
 Bill Gates,28,10,1955,Washington,USA,American,Computers;Money;Pears;Windows
 Bob Marley,6,2,1945,Nine Mile,Jamaica,Jamaican,Peace;Music;Weed
+
 Dimebag Darell,20,8,1966,Texas,USA,American,Texas;Guitars;Pantera;Beer;Squeeze
 Georgy Zhukov,1,12,1896,Strelkovka,Russian Empire,Russian,War;Strategy;Awards;Victory
 Yuri Gagarin,9,3,1934,Klushino,USSR,Russian,Space;Army;Space Flights;Sports;Health

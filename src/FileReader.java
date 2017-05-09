@@ -62,8 +62,10 @@ public class FileReader {
         String line = null;
         while (in.hasNextLine()) {
             line = in.nextLine();
-            Scanner lineSc = new Scanner(line);
-            createConnection(lineSc, bt);
+            if (line.length() > 1){
+                Scanner lineSc = new Scanner(line);
+                createConnection(lineSc, bt);
+            }
         }
         Graph g = new Graph(filename, bt);
         return g;
@@ -99,8 +101,10 @@ public class FileReader {
         String line = null;
         while (in.hasNextLine()) {
             line = in.nextLine();
-            Scanner lineSc = new Scanner(line);
-            bt.insertProfile(createProfile(lineSc));
+            if (line.length() > 1){
+                Scanner lineSc = new Scanner(line);
+                bt.insertProfile(createProfile(lineSc));
+            }
         }
         return bt;
     }

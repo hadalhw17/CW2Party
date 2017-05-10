@@ -14,6 +14,6 @@ public class BSTMain {
         newBt.insertProfile(vladimir);
         newBt.insertProfile(nikolai);
 
-        newBt.printAlphabetical(newBt.getRoot());
+        newBt.printAlphabetical();
     }
 }

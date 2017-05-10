@@ -31,19 +31,7 @@ public class Graph {
         this.bt = tree;
     }
 
-    /**
-     * Fill in the graph.
-     * @param focusNode root node of a binary search tree with profiles
-     */
-    public void addProfiles(final BSTNode focusNode) {
-        if (focusNode.getLeft() != null) {
-            edges.add(focusNode.getProfile());
-            addProfiles(focusNode.getLeft());
-        } else if (focusNode.getRight() != null) {
-            edges.add(focusNode.getProfile());
-            addProfiles(focusNode.getRight());
-        }
-    }
+
 
     /**
      * Finds all common friends of a and b including a and b.
@@ -55,15 +43,15 @@ public class Graph {
         BST friend = new BST();
         for (int i = 0; i < a.getNumOfFriends(); i++) {
             for (int n = 0; n < b.getNumOfFriends(); n++) {
-                if (bt.find(a.getName()).getProfile().getFriend(i).getName().
-                        equals(bt.find(b.getName()).getProfile().getFriend(n).
+                if (bt.find(a.getName()).getFriend(i).getName().
+                        equals(bt.find(b.getName()).getFriend(n).
                                 getName())) {
-                    friend.insertProfile(bt.find(b.getName()).getProfile()
+                    friend.insertProfile(bt.find(b.getName())
                             .getFriend(n));
                 }
             }
-            if (bt.find(a.getName()).getProfile().getFriend(i).getName().
-                    equals(bt.find(b.getName()).getProfile().getName())) {
+            if (bt.find(a.getName()).getFriend(i).getName().
+                    equals(bt.find(b.getName()).getName())) {
                 friend.insertProfile(a);
                 friend.insertProfile(b);
             }

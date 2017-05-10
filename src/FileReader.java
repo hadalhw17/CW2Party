@@ -12,6 +12,10 @@ public class FileReader {
      */
     private static final int INT_COUNTER = 10;
     /**
+     * Default day/year/month in case of wrong output
+     */
+    private static final int DEFAULT_DATE = 1;
+    /**
      * Scans file with profiles.
      * @param filename name of file
      * @return bst with profiles
@@ -62,7 +66,7 @@ public class FileReader {
         String line = null;
         while (in.hasNextLine()) {
             line = in.nextLine();
-            if (line.length() > 1){
+            if (line.length() > 1) {
                 Scanner lineSc = new Scanner(line);
                 createConnection(lineSc, bt);
             }
@@ -82,10 +86,8 @@ public class FileReader {
         nameOne = in.next();
         nameTwo = in.next();
         if (bt.find(nameOne) != null && bt.find(nameTwo) != null) {
-            bt.find(nameOne).getProfile().addFriend(bt.find(nameTwo).
-                    getProfile());
-            bt.find(nameTwo).getProfile().addFriend(bt.find(nameOne).
-                    getProfile());
+            bt.find(nameOne).addFriend(bt.find(nameTwo));
+            bt.find(nameTwo).addFriend(bt.find(nameOne));
         } else {
             System.out.println("cannot find a name");
         }
@@ -101,7 +103,7 @@ public class FileReader {
         String line = null;
         while (in.hasNextLine()) {
             line = in.nextLine();
-            if (line.length() > 1){
+            if (line.length() > 1) {
                 Scanner lineSc = new Scanner(line);
                 bt.insertProfile(createProfile(lineSc));
             }
@@ -117,13 +119,35 @@ public class FileReader {
     public static Profile createProfile(final Scanner line) {
         String name, town, country, nationality;
         int day, month, year; // Variables representing date(dd/mm/yyyy)
+        String tmp;
         line.useDelimiter(",");
         String[] interests;
 
         name = line.next();
-        day = Integer.parseInt(line.next());
-        month = Integer.parseInt(line.next());
-        year = Integer.parseInt(line.next());
+        try {
+            day = Integer.parseInt(line.next());
+        } catch (NumberFormatException e) {
+            System.out.println("One of the DoB inputs is not an integer. "
+                    + "In this case as day is not a number it is automatically"
+                    + " set to " + DEFAULT_DATE);
+            day = DEFAULT_DATE;
+        }
+        try {
+            month = Integer.parseInt(line.next());
+        } catch (NumberFormatException e) {
+            System.out.println("One of the DoB inputs is not an integer. "
+                    + "In this case as month is not a number it is "
+                    + "automatically set to " + DEFAULT_DATE);
+            month = DEFAULT_DATE;
+        }
+            try {
+                year = Integer.parseInt(line.next());
+            } catch (NumberFormatException e) {
+                System.out.println("One of the DoB inputs is not an integer. In"
+                        + " this case as year is not a number it is "
+                        + "automatically set to " + DEFAULT_DATE);
+                year = DEFAULT_DATE;
+            }
         town = line.next();
         country = line.next();
         nationality = line.next();

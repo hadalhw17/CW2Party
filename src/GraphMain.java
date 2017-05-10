@@ -7,13 +7,8 @@ public class GraphMain {
 
         BST bt = FileReader.readProfiles("profiles.txt");
         Graph g = FileReader.readFriends("friends.txt", bt);
-        g.addProfiles(bt.getRoot());
-        //g.toString();
 
-        //if(bt.find("name"))
-        g.commonFriends(bt.find("Jeff Hanneman").getProfile(),
-                bt.find("Dimebag Darell").getProfile()).printAlphabetical(
-                        g.commonFriends(bt.find("Jeff Hanneman").getProfile(),
-                        bt.find("Dimebag Darell").getProfile()).getRoot());
+        g.commonFriends(bt.find("Freddie Mercury"),
+                bt.find("Friendly Ghost Casper")).printAlphabetical();
     }
 }

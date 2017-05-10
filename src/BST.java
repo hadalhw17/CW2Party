@@ -18,13 +18,6 @@ public class BST {
     }
 
     /**
-     * Getter for root.
-     * @return root node of bst
-     */
-    public BSTNode getRoot() {
-        return root;
-    }
-    /**
      * This method calls private method insertProfile.
      * @param p A profile which is needed to be added
      */
@@ -58,10 +51,17 @@ public class BST {
     }
 
     /**
+     * This method calls a private method printAlphabetical.
+     * It is done not to access root from outside of this class.
+     */
+    public void printAlphabetical() {
+        printAlphabetical(root);
+    }
+    /**
      * Inorder traverse for binary search tree.
      * @param focusNode a starting point for inorder traverse
      */
-    public void printAlphabetical(final BSTNode focusNode) {
+    private void printAlphabetical(final BSTNode focusNode) {
         // Traverse the left node
         if (focusNode.getLeft() != null) {
             printAlphabetical(focusNode.getLeft());
@@ -78,17 +78,17 @@ public class BST {
      * @param name name of a profile which is needed to find
      * @return node with profile required
      */
-    public BSTNode find(final String name) {
+    public Profile find(final String name) {
         BSTNode current = root;
         while (current != null) {
             if (current.getProfile().getName().compareTo(name) == 0) {
-                return current;
+                return current.getProfile();
             } else if (current.getProfile().getName().compareTo(name) > 0) {
                 current = current.getLeft();
             } else if (current.getProfile().getName().compareTo(name) < 0) {
                 current = current.getRight();
             }
         }
-        return current;
+        return current.getProfile();
     }
 }

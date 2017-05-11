@@ -1,5 +1,6 @@
 /**
  * Created by geron on 22.04.2017.
+ * Main class for BST.java
  */
 public class BSTMain {
 

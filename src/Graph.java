@@ -2,7 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by geron on 22.04.2017.
+ * This class represents Graph.
+ * @author Slobodov Aleksandr
+ * @version 1.0
  */
 public class Graph {
 

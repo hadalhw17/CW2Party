@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 
 /**
- * Created by geron on 22.04.2017.
+ * This class represents profile
+ * @author Slobodov Aleksandr
+ * @version 1.0
  */
 public class Profile {
 

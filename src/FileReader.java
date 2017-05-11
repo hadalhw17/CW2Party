@@ -3,7 +3,9 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
- * Created by geron on 22.04.2017.
+ * This is a file reader to read files needed for Binary Search Tree and Graph
+ * @author Slobodov Aleksandr
+ * @version 1.0
  */
 public class FileReader {
 

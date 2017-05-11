@@ -1,5 +1,7 @@
 /**
- * Created by geron on 22.04.2017.
+ * Class representing a node of a binary search tree.
+ * @author Slobodov Aleksandr
+ * @version 1.0
  */
 public class BSTNode {
 
